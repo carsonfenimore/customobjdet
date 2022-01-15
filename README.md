@@ -54,11 +54,11 @@ From within the tf1152 docker export the fine-tuned model to tensorflow lite:
 
         ./scripts/convert_checkpoint_to_edgetpu_tflite.sh
 
-    Convert tensforlite to edgetpu:
+Convert tensforlite to edgetpu:
 
         ./scripts/tpu_compile.sh
 
-    Copy you tpu-compiled model from learn_${PROJECT} to your device
+Copy you tpu-compiled model from learn_${PROJECT} to your device
 
     
 
@@ -91,8 +91,8 @@ To place ot inside where, say, depthai_demo cna find it, create a json under dep
             }
         }
 
-    And put the blob along side it
-    TODO: Generate this json by parsing the labelmap, as its the only thing that changes...
+And put the blob along side it
+TODO: Generate this json by parsing the labelmap, as its the only thing that changes...
 
     
 # Notes on what was modified to make all these scripts work
