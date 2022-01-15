@@ -9,21 +9,20 @@ This repo contains various files to support: end-to-end edge AI. This includes:
 # Training 
 
 
-Set up your data:
-        TODO: all scripts from here on should accept PROJECT_NAME as an arg, so we arent modifying any scripts...
-    First define your project by setting PROJECT_NAME in scripts/constants.sh
-    Create a directory in scripts/images_{PROJECT_NAME}
-    Put your map of numbers to class into a file called "label_map.pbtxt" inside scripts/images_{PROJECT_NAME}
-        todo: use the collab script to infer this
-    Put train images/labelImg xmls inside scripts/images_{PROJECT_NAME}/train
-    Put test images/labelImg xmls inside scripts/images_{PROJECT_NAME}/test
+## Set up your data:
+  - TODO: all scripts from here on should accept PROJECT_NAME as an arg, so we arent modifying any scripts...
+  - First define your project by setting PROJECT_NAME in scripts/constants.sh
+  - Create a directory in scripts/images_{PROJECT_NAME}
+  - Put your map of numbers to class into a file called "label_map.pbtxt" inside scripts/images_{PROJECT_NAME}
+  - Put train images/labelImg xmls inside scripts/images_{PROJECT_NAME}/train
+  - Put test images/labelImg xmls inside scripts/images_{PROJECT_NAME}/test
 
-Train:
-    Run the docker:
+## Train
+Run the docker:
 
     ./run1152.sh
 
-    Inside the container:
+Inside the container:
 
         # Grab mobilenet v2 checkpoints
         # This also copies the template pipeline config
@@ -41,7 +40,7 @@ Train:
         # outputs various checkpoints in the train_output directory
         ./scripts/do_train.sh
 
-    In another console run the tensorboard script:
+In another console run the tensorboard script:
 
         ./run_tensorboard.sh
 
