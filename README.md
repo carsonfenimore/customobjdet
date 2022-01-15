@@ -44,7 +44,7 @@ In another console run the tensorboard script:
 
         ./run_tensorboard.sh
 
-Wait til training is done. Can watch tensorboard by going to http://<host>:6007
+Wait til training is done. Can watch tensorboard by going to http://host:6007
 
 # POST-TRAINING:
 
